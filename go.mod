@@ -1,4 +1,4 @@
-module goCzdb
+module github.com/zhengjianyang/goCzdb
 
 go 1.22
 
