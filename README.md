@@ -4,7 +4,7 @@ goCzdb 是一个用于在纯真(CZ88)IP库中搜索数据的类。它支持三�
 
 ## goMod 依赖
 
-如果你想在你的项目中使用`goCzdb` ： `go install github.com/zhengjianyang/goCzdb`
+如果你想在你的项目中使用`goCzdb` ： `go get github.com/zhengjianyang/goCzdb`
 
 ## 支持 IPv4 和 IPv6
 
