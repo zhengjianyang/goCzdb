@@ -2,8 +2,8 @@ package hyperHeaderDecoder
 
 import (
 	"fmt"
-	"goCzdb/byteUtil"
-	"goCzdb/entity"
+	"github.com/zhengjianyang/goCzdb/byteUtil"
+	"github.com/zhengjianyang/goCzdb/entity"
 	"io"
 	"strconv"
 	"time"

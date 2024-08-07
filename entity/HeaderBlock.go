@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"goCzdb/byteUtil"
+	"github.com/zhengjianyang/goCzdb/byteUtil"
 	"math"
 )
 

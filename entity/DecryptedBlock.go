@@ -2,8 +2,8 @@ package entity
 
 import (
 	"encoding/base64"
-	"goCzdb/aesECB"
-	"goCzdb/byteUtil"
+	"github.com/zhengjianyang/goCzdb/aesECB"
+	"github.com/zhengjianyang/goCzdb/byteUtil"
 )
 
 /*DecryptedBlock

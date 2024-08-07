@@ -1,6 +1,6 @@
 package entity
 
-import "goCzdb/byteUtil"
+import "github.com/zhengjianyang/goCzdb/byteUtil"
 
 // HyperHeaderBlock 表示HyperHeader结构的头块。
 // HyperHeaderBlock类封装了以下信息：

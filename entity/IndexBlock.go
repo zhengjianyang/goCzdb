@@ -1,8 +1,8 @@
 package entity
 
 import (
-	"goCzdb/byteUtil"
-	"goCzdb/constant"
+	"github.com/zhengjianyang/goCzdb/byteUtil"
+	"github.com/zhengjianyang/goCzdb/constant"
 )
 
 // IndexBlock 表示数据库中的索引块。

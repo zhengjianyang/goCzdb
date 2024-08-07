@@ -2,10 +2,10 @@ package goCzdb
 
 import (
 	"fmt"
-	"goCzdb/byteUtil"
-	"goCzdb/constant"
-	"goCzdb/entity"
-	"goCzdb/hyperHeaderDecoder"
+	"github.com/zhengjianyang/goCzdb/byteUtil"
+	"github.com/zhengjianyang/goCzdb/constant"
+	"github.com/zhengjianyang/goCzdb/entity"
+	"github.com/zhengjianyang/goCzdb/hyperHeaderDecoder"
 	"net"
 	"os"
 )
