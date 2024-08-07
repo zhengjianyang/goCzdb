@@ -522,22 +522,24 @@ func (ds *DbSearcher) getIpBytes(ip string) ([]byte, error) {
  */
 func compareBytes(bytes1, bytes2 []byte, length int) int {
 	for i := 0; i < len(bytes1) && i < len(bytes2) && i < length; i++ {
-		if bytes1[i]*bytes2[i] > 0 {
-			if bytes1[i] < bytes2[i] {
+		b1 := int(bytes1[i])
+		b2 := int(bytes2[i])
+		if b1*b2 > 0 {
+			if b1 < b2 {
 				return -1
-			} else if bytes1[i] > bytes2[i] {
+			} else if b1 > b2 {
 				return 1
 			}
-		} else if bytes1[i]*bytes2[i] < 0 {
+		} else if b1*b2 < 0 {
 			// When the signs are different, the negative byte is considered larger
-			if bytes1[i] > 0 {
+			if b1 > 0 {
 				return -1
 			} else {
 				return 1
 			}
-		} else if bytes1[i]*bytes2[i] == 0 && bytes1[i]+bytes2[i] != 0 {
+		} else if b1*b2 == 0 && b1+b2 != 0 {
 			// When one byte is zero and the other is not, the zero byte is considered smaller
-			if bytes1[i] == 0 {
+			if b1 == 0 {
 				return -1
 			} else {
 				return 1
