@@ -363,7 +363,8 @@ func (ds *DbSearcher) searchInHeader(ip []byte) [2]int {
 		}
 	}
 
-	if l == 0 {
+	// less than header range
+	if l == 0 && h <= 0 {
 		return [2]int{0, 0}
 	}
 
