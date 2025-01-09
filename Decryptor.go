@@ -2,8 +2,7 @@ package goCzdb
 
 import (
 	"encoding/base64"
-	"github.com/zhengjianyang/goCzdb/hyperHeaderDecoder"
-	"io"
+	"github.com/zhengjianyang/goCzdb/byteUtil"
 )
 
 type Decryptor struct {
@@ -30,14 +29,9 @@ func (d Decryptor) decrypt(data []byte) []byte {
 GetVersion
 获取czdb数据库版本
 
-file: 数据库文件
-
-key： 密钥
+headerBytes: 数据库文件 byte[:12]
 */
-func GetVersion(file io.Reader, key string) (int64, error) {
-	headerBlock, err := hyperHeaderDecoder.Decrypt(file, key)
-	if err != nil {
-		return 0, err
-	}
-	return headerBlock.Version, nil
+func GetVersion(headerBytes []byte) int64 {
+	version := byteUtil.GetIntLong(headerBytes, 0)
+	return version
 }
