@@ -19,6 +19,9 @@ import (
 // 对于内存和二进制搜索,它使用字节数组来表示数据库的原始二进制字符串。
 // 该类还提供关闭数据库的方法。
 type DbSearcher struct {
+	Version  int64 //版本
+	ClientID int64 //客户端ID
+
 	dbType        string
 	ipBytesLength int
 	queryType     string
@@ -57,6 +60,8 @@ func NewDbSearcher(dbFile string, queryType string, key string) (*DbSearcher, er
 	if err != nil {
 		return nil, err
 	}
+	ds.Version = headerBlock.Version
+	ds.ClientID = headerBlock.ClientId
 	ds.raf, err = NewRandomAccessFile(dbFile, int64(headerBlock.GetHeaderSize()))
 	if err != nil {
 		return nil, err
